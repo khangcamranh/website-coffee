@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Tin Tức</title>
+  <style>
+    /* Toàn trang */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Khung chính */
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+      border: 1px solid #999;
+    }
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 200px;
+      background: url('img/banner.png') no-repeat center/cover;
+    }
+
+    /* Menu ngang đa cấp */
+    .menu {
+      background-color: #990033;
+      overflow: hidden;
+    }
+    .menu ul {
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .menu > ul > li {
+      float: left;
+      position: relative;
+    }
+    .menu > ul > li > a {
+      display: block;
+      padding: 12px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .menu > ul > li:hover {
+      background-color: #b30047;
+    }
+    .menu li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #990033;
+      min-width: 150px;
+      z-index: 10;
+    }
+    .menu li:hover > ul {
+      display: block;
+    }
+    .menu li ul li {
+      float: none;
+    }
+    .menu li ul li a {
+      padding: 10px;
+    }
+    /* Nội dung chính: hai cột */
+    .main {
+      display: flex;
+      background-color: #e0fcff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    /* Cột trái: bài viết & video */
+    .main .content {
+      flex: 3;
+      margin-right: 20px;
+    }
+    .main .content h2 {
+      color: #c00;
+      margin-top: 0;
+    }
+    .main .content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .main .content p {
+      text-align: justify;
+      line-height: 1.5;
+    }
+    .main .content iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      margin-top: 15px;
+    }
+    /* Cột phải: iframe form đăng ký */
+    .main .sidebar {
+      flex: 1;
+      background: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      height: fit-content;
+    }
+    .main .sidebar iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
+    }
+    /* Footer */
+    .footer {
+      background-color: #003399;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    /* ảnh nổi trái */
+.flt-img {
+  float: left;
+  width: 300px;        /* hoặc % tuỳ bạn */
+  margin-right: 20px;
+}
+.flt-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* khối chứa text + video nổi trái, bên cạnh ảnh */
+.text-video {
+  float: left;
+  width: calc(100% - 320px);  /* 100% - (300 + 20) */
+}
+
+.text-video iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  margin-top: 15px;
+}
+    /* Clear floats if any */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    } 
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Menu đa cấp ngang -->
+    <nav class="menu clearfix">
+      <ul>
+        <li><a href="#">Trang Chủ</a></li>
+        <li>
+          <a href="#">SẢN PHẨM</a>
+          <ul>
+            <li><a href="#">SẢN PHẨM 1</a></li>
+            <li><a href="#">SẢN PHẨM 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">DỊCH VỤ</a>
+          <ul>
+            <li><a href="#">DỊCH VỤ 1</a></li>
+            <li><a href="#">DỊCH VỤ 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">LIÊN HỆ</a></li>
+        <li><a href="bt2.html" target="_blank">ĐĂNG KÝ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Nội dung chính -->
+    <div class="main">
+      <!-- Bài viết & video -->
+      <div class="content">
+        <h2>Bức tranh lớn nhất thế giới giá 62 triệu USD</h2>
+        <div class="flt-img">
+            <img src="img/thieunu.jpg" alt="Thiếu nữ bên hoa huệ">
+        </div>
+        <div class="text-video">
+            <p>
+          Bức tranh canvas lớn nhất thế giới của nghệ sĩ người Anh Sacha Jafri, được bán với giá 62 triệu USD
+          trong cuộc đấu giá ở Dubai hôm 23/3.<br>
+          Bức tranh mang tên <em>The Journey of Humanity</em> được ghép từ 70 khung vải, trải dài 1.595,76 m<sup>2</sup>, 
+          tương đương một sân bóng rổ. Các nhà tổ chức cho biết tác phẩm đã được bán với giá 62 triệu USD, gấp đôi 
+          số tiền dự kiến. Số tiền thu được sẽ quyên góp cho các tổ chức từ thiện, giúp đỡ trẻ em trên thế giới.<br>
+          Bức tranh đã được Tổ chức Kỷ lục Guinness Thế giới xác nhận là bức tranh canvas lớn nhất thế giới, 
+          được trưng bày trong phòng khiêu vũ Atlantis, khách sạn Palm ở Dubai. Ban đầu bức tranh dự định bán 
+          theo từng mảnh ghép, song doanh nhân Andre Abdoune, một công dân Pháp cư trú tại Dubai, đã mua toàn bộ 
+          70 khung ghép của tác phẩm vào ngày 22/3 trong cuộc đấu giá.
+        </p>
+        <!-- YouTube video -->
+        <iframe src="https://www.youtube.com/embed/5aDA85AQlBE" ></iframe>
+        </div>
+      </div>
+
+      <!-- Sidebar: iframe form đăng ký -->
+      <div class="sidebar">
+        <iframe src="btvn.html"></iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Chuyên mục văn hóa giải trí của VNExpress ©2025 Ngoisao.net | Tầng 5, Tòa nhà FPT Cầu Giấy, phường Dịch Vọng Hậu, 
+      Quận Cầu Giấy, Hà Nội | Email: lienhe@ngoisao.net | Điện thoại: 024 7300 9999 – Ext 4546
+    </div>
+  </div>
+
+</body>
+</html>

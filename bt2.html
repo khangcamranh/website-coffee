@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng Ký Dịch Vụ</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .box .header {
+      background: #00ccff;
+      padding: 20px;
+      text-align: center;
+    }
+    .box .header h2 {
+      margin: 0;
+      color: #000;
+      font-size: 24px;
+    }
+    .box .content {
+      padding: 20px;
+    }
+    .box .content label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .box .content input[type="text"],
+    .box .content input[type="email"],
+    .box .content input[type="password"],
+    .box .content input[type="number"],
+    .box .content select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #999;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .box .content .radios {
+      margin-bottom: 15px;
+    }
+    .box .content .radios label {
+      font-weight: normal;
+      margin-right: 20px;
+    }
+    .box .content .btn {
+      text-align: center;
+    }
+    .box .content .btn input {
+      background: #00ccff;
+      border: none;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .box .content .btn input:hover {
+      background: #00b2e6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <!-- Header -->
+    <div class="header">
+      <h2>ĐĂNG KÝ DỊCH VỤ</h2>
+    </div>
+
+    <!-- Form content -->
+    <div class="content">
+      <form action="#" method="post">
+        <!-- Họ và Tên -->
+        <label for="fullname">Họ và Tên</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên">
+
+        <!-- Nghề nghiệp -->
+        <label>Ngành nghề</label>
+        <div class="radios">
+          <label><input type="radio" name="career" value="giaoduc"> Giáo dục</label>
+          <label><input type="radio" name="career" value="kinhdoanh"> Kinh doanh</label>
+          <label><input type="radio" name="career" value="xaydung"> Xây dựng</label>
+        </div>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email">
+
+        <!-- Mật khẩu -->
+        <label for="password">Mật Khẩu</label>
+        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+
+        <!-- Số điện thoại -->
+        <label for="phone">Số Điện Thoại</label>
+        <input type="number" id="phone" name="phone" placeholder="Nhập số điện thoại">
+
+        <!-- Dropdown điểm đến yêu thích -->
+        <label for="destination">Chọn điểm đến yêu thích</label>
+        <select id="destination" name="destination">
+          <option>Đầm sen - TP.HCM</option>
+          <option>Cầu Trường Tiền - Huế</option>
+          <option>Quảng trường Lâm viên - Đà Lạt</option>
+          <option>Cầu Xóm Bóng - Nha Trang</option>
+          <option>Đồi cát bay - Bình Thuận</option>
+        </select>
+
+        <!-- Nút đăng ký -->
+        <div class="btn">
+          <input type="submit" value="ĐĂNG KÝ">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
